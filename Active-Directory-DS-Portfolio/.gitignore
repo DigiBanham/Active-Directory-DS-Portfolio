@@ -1,0 +1,11 @@
+# Do not publish private credentials or certificate material
+.env
+*.pfx
+*.p12
+*.key
+*.pem
+
+# Local exports and temporary diagnostics
+*.tmp
+*.bak
+*.log

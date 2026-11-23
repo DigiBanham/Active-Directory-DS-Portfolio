@@ -1,0 +1,23 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.55", ranksep="0.65", splines=ortho, fontname="Arial", label="ACTIVE DIRECTORY HOMELAB — CURRENT NETWORK ARCHITECTURE", labelloc=t, fontsize=20, fontcolor="#16365C"];
+  node [shape=box, style="rounded,filled", fontname="Arial", fontsize=11, color="#B8C7D9", penwidth=1.2, margin="0.18,0.12", fontcolor="#18324F"];
+  edge [fontname="Arial", fontsize=9, color="#54708E", penwidth=1.4, arrowsize=0.8];
+
+  Internet [label="Internet", shape=ellipse, fillcolor="#EAF3FC", color="#5D91C8", width=1.2, height=0.7];
+  NAT [label="VirtualBox NAT\nExternal uplink", fillcolor="#EAF3FC", color="#5D91C8"];
+  DC1 [label="DC1 — Windows Server 2025\n\nExternal NIC: DHCP via VirtualBox NAT\nInternal NIC: 172.16.0.1/24\nNo default gateway on Internal NIC", fillcolor="#DCEBFA", color="#3576B8", penwidth=1.8];
+  INTNET [label="VirtualBox Internal Network\n172.16.0.0/24", fillcolor="#EEF5E8", color="#6E9B57"];
+  CLIENT [label="CLIENT1 — Windows 11 Enterprise\nDHCP client • Domain-joined", fillcolor="#E8F4E8", color="#6E9B57"];
+  SERVICES [label="Services hosted by DC1\nAD DS / DNS • DHCP • RRAS / NAT\nForest-root PDC Emulator / Windows Time", fillcolor="#F3F0FB", color="#8A78B8"];
+  CONFIG [label="Internal DHCP scope\n172.16.0.100–172.16.0.200\nGateway and DNS: 172.16.0.1", fillcolor="#FFF5E5", color="#D5A347"];
+
+  {rank=same; Internet; NAT; DC1;}
+  {rank=same; INTNET; CLIENT;}
+  {rank=same; SERVICES; CONFIG;}
+  Internet -> NAT [label="Outbound"];
+  NAT -> DC1 [label="External NIC"];
+  DC1 -> INTNET [label="Internal NIC"];
+  INTNET -> CLIENT [label="DHCP client traffic"];
+  DC1 -> SERVICES [style=dashed, arrowhead=none, color="#8A78B8"];
+  INTNET -> CONFIG [style=dashed, arrowhead=none, color="#D5A347"];
+}
