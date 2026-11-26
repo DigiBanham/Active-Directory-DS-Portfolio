@@ -10,8 +10,8 @@ Each forwarder was tested using `Resolve-DnsName` over both UDP (the default) an
 
 | Forwarder | Transport | Result |
 |---|---|---|
-| `192.168.1.1` | UDP | Successful external hostname resolution |
-| `192.168.1.1` | TCP | Successful external hostname resolution |
+| `[Home Network DNS Forwarder — Address Redacted]` | UDP | Successful external hostname resolution |
+| `[Home Network DNS Forwarder — Address Redacted]` | TCP | Successful external hostname resolution |
 | `fd17:625c:f037:2::3` | UDP | Query timed out |
 | `fd17:625c:f037:2::3` | TCP | Socket communication error |
 
@@ -37,7 +37,7 @@ Get-DnsServerForwarder |
 
 | Setting | Final value |
 |---|---|
-| Forwarder | `192.168.1.1` |
+| Forwarder | `[Home Network DNS Forwarder — Address Redacted]` |
 | Use root hints | `True` |
 | Timeout | 3 seconds |
 | Enable reordering | `True` |
