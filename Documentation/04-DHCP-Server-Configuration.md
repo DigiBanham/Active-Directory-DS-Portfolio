@@ -43,7 +43,7 @@ I installed the DHCP Server role through **Server Manager > Add Roles and Featur
 
 After installation, I accessed the DHCP management console from **Server Manager > Tools > DHCP**.
 
-![Opening the DHCP management console from Server Manager](../Screenshots/Network-Services/DHCP/Configuring-DHCP1.png)
+![Opening the DHCP management console from Server Manager](../Screenshots/Network-Services/DHCP/01a-Openning-DHCP.png)
 
 *Figure 2. DHCP management console available from Server Manager's Tools menu.*
 

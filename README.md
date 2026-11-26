@@ -20,7 +20,27 @@ A hands-on Windows infrastructure project built in Oracle VirtualBox to practice
 | Domain-joined Windows client | 1 (`CLIENT1`) |
 | DHCP scope | 1 internal IPv4 scope |
 | Lab user accounts provisioned in bulk | 1,000+ |
-| Source screenshots retained | 52 |
+
+## Explore the project
+
+### 📘 Implementation documentation
+
+1. 🖥️ [Environment and network configuration](Documentation/01-Environment-and-Server-Configuration.md)
+2. 🏢 [Active Directory deployment](Documentation/02-Active-Directory-Deployment.md)
+3. 👥 [Identity and account administration](Documentation/03-Identity-and-Account-Administration.md)
+4. 🌐 [Routing and Remote Access (RRAS/NAT)](Documentation/04-Routing-and-Remote-Access.md)
+5. 📡 [DHCP Server configuration](Documentation/05-DHCP-Server-Configuration.md)
+
+### 🧰 Troubleshooting case studies
+
+- 🔎 [DNS registration on a multihomed domain controller](Troubleshooting/01-Multihomed-DNS-Registration.md)
+- 🌐 [DNS forwarder reachability and cleanup](Troubleshooting/02-DNS-Forwarder-Reachability.md)
+- ⏱️ [Domain controller health and Windows Time](Troubleshooting/03-Domain-Controller-Health-and-Time.md)
+
+### 📂 Evidence and references
+
+- 🖼️ [Screenshot index](Screenshots/README.md)
+- 📚 [Microsoft and technical references](References/README.md)
 
 ## Overview
 
@@ -69,33 +89,13 @@ The internal network uses `172.16.0.0/24`. DC1's internal interface is staticall
 | Domain controller time | Identified that DC1 was using its local clock, configured external NTP peers on the forest-root PDC Emulator, and verified successful synchronization. |
 | Domain controller health | Used `dcdiag`, service checks, and share verification to assess AD DS, DNS, SYSVOL, and Netlogon availability. |
 
-## Explore the project
-
-### Implementation documentation
-
-1. [Environment and network configuration](Documentation/01-Environment-and-Server-Configuration.md)
-2. [Active Directory deployment](Documentation/02-Active-Directory-Deployment.md)
-3. [Identity and account administration](Documentation/03-Identity-and-Account-Administration.md)
-4. [DHCP, routing, and client integration](Documentation/04-Network-Services-and-Client-Integration.md)
-
-### Troubleshooting case studies
-
-- [DNS registration on a multihomed domain controller](Troubleshooting/01-Multihomed-DNS-Registration.md)
-- [DNS forwarder reachability and cleanup](Troubleshooting/02-DNS-Forwarder-Reachability.md)
-- [Domain controller health and Windows Time](Troubleshooting/03-Domain-Controller-Health-and-Time.md)
-
-### Evidence and references
-
-- [Screenshot index — all 52 source screenshots](Screenshots/README.md)
-- [Microsoft and technical references](References/README.md)
-
 ## Tools and technologies
 
-**Windows infrastructure:** Windows Server 2025, Windows 11 Enterprise, AD DS, DNS Server, DHCP Server, RRAS/NAT, Windows Time.
+**🪟 Windows infrastructure:** Windows Server 2025, Windows 11 Enterprise, AD DS, DNS Server, DHCP Server, RRAS/NAT, Windows Time.
 
-**Administration and troubleshooting:** PowerShell, Active Directory Users and Computers, Server Manager, `dcdiag`, `Resolve-DnsName`, `nslookup`, and `w32tm`.
+**⚙️ Administration and troubleshooting:** PowerShell, Active Directory Users and Computers, Server Manager, `dcdiag`, `Resolve-DnsName`, `nslookup`, and `w32tm`.
 
-**Virtualization and documentation:** Oracle VirtualBox, Git, GitHub, Markdown.
+**💻 Virtualization and documentation:** Oracle VirtualBox, Git, GitHub, Markdown.
 
 ## Scope and design notes
 
@@ -106,6 +106,6 @@ The internal network uses `172.16.0.0/24`. DC1's internal interface is staticall
 - The supplied project archive contained inline PowerShell examples but no standalone `.ps1` files. Reusable scripts can be added as they are cleaned, reviewed, and published separately.
 - The separate Windows Server Core learning track is maintained outside this portfolio snapshot.
 
-## Future extensions
+## 🧭 Future extensions
 
 Potential next steps include a separate Server Core AD DS deployment, Group Policy design, file shares and NTFS permissions, additional domain controllers, and hybrid identity exploration with Microsoft Entra ID.
