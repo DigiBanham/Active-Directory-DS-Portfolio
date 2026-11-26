@@ -27,9 +27,9 @@ A hands-on Windows infrastructure project built in Oracle VirtualBox to practice
 
 1. 🖥️ [Environment and network configuration](Documentation/01-Environment-and-Server-Configuration.md)
 2. 🏢 [Active Directory deployment](Documentation/02-Active-Directory-Deployment.md)
-3. 👥 [Identity and account administration](Documentation/03-Identity-and-Account-Administration.md)
-4. 🌐 [Routing and Remote Access (RRAS/NAT)](Documentation/04-Routing-and-Remote-Access.md)
-5. 📡 [DHCP Server configuration](Documentation/05-DHCP-Server-Configuration.md)
+3. 🌐 [Routing and Remote Access (RRAS/NAT)](Documentation/03-Routing-and-Remote-Access.md)
+4. 📡 [DHCP Server configuration](Documentation/04-DHCP-Server-Configuration.md)
+5. 👥 [Identity and account administration](Documentation/05-Identity-and-Account-Administration.md)
 
 ### 🧰 Troubleshooting case studies
 
